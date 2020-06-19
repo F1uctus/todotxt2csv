@@ -1,0 +1,30 @@
+COMPLETED_RX_PATTERN: ^x\s
+
+# 0=year 1=month 2=day
+COMPLETION_DATE_RX_PATTERN: ^x\s+(\d{4})-(\d\d)-(\d\d)
+
+# 0=year 1=month 2=day
+CREATION_DATE_RX_PATTERN: ^(?:x\s+\d{4}-\d\d-\d\d\s+)?(\d{4})-(\d\d)-(\d\d)
+
+# 0=year 1=month 2=day
+DUE_DATE_RX_PATTERN: due:(\d{4})-(\d\d)-(\d\d)
+
+# 0=key 1=value
+KV_RX_PATTERN: \s(\w+):([^:\s]+)
+
+# 0=letter (priority)
+PRIORITY_RX_PATTERN: ^\(([a-zA-Z])\)
+
+# 0=word (context)
+SUBJECT_RX_PATTERN: \s@([^\s]+)
+
+# 0=word (project)
+PROJECT_RX_PATTERN: \s\+([^\s]+)
+
+# 0=full url
+URL_RX_PATTERN: (?:(?:https?|ftp|smtp):\/\/[^\s]+)
+
+# may be unapplicable for somebody
+# (I always place projects/due at the beginning)
+# 1=actual task content (after x, priority, dates, and project)
+CONTENT_RX_PATTERN: (?:.*?)(?:\d{4}-\d\d-\d\d\sdue:\d{4}-\d\d-\d\d)(?:\s@(?:[^\s]+))*(?:\s\+(?:[^\s]+))*\s*(.*?)(?:(?:http)|$)
