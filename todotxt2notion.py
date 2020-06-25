@@ -11,19 +11,6 @@ from pathlib import Path
 # 9.1.2.8 9.2.3.6 9.2.4.4,To Do,Computer Networks,Laboratory work,,,"Jun 17, 2020","Jun 21, 2020"
 
 
-PROPERTIES = [
-    "Name",
-    "Subject",
-    "Project",
-    "Date Completed",
-    "Date Created",
-    "Due Date",
-    "Links",
-    "Property",
-    "Status",
-]
-
-
 def parse_todo_txt(
     file_path: Path, patterns: Dict[str, str], replacements: Dict[str, str]
 ) -> List[Dict[str, str]]:
@@ -36,7 +23,8 @@ def parse_todo_txt(
     lines = [x.strip() for x in content]
     tasks: List[Dict[str, str]] = []
     for line in lines:
-        if not line.strip():
+        # skip empty lines
+        if not line:
             continue
 
         # priority = re.match(patterns["PRIORITY_RX_PATTERN"], line)
