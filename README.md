@@ -1,4 +1,4 @@
-<h1 align="center">todotxt2notion</h1>
+<h1 align="center">todotxt2csv</h1>
 
 A simple Python script to migrate your `.todo.txt` files to `.csv` format that can be imported to Notion.
 
