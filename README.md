@@ -4,10 +4,10 @@ A simple Python script to migrate your `.todo.txt` files to `.csv` format that c
 
 ## Usage
 ```
-py todotxt2notion -i <input file path> \
-                  [-r <replacements file path>] \
-                  [-o <output file path>] \
-                  [-v <verbosity level>]
+py todotxt2csv -i <input file path> \
+              [-r <replacements file path>] \
+              [-o <output file path>] \
+              [-v <verbosity level>]
 ```
 Verbosity levels:
 | Argument value | Explanation         |
